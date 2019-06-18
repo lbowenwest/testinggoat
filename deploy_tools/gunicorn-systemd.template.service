@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn server for DOMAIN
+
+[Service]
+Restart=on-failure
+User=goat
+WorkingDirectory=/home/goat/sites/DOMAIN
+EnvironmentFile=/home/goat/sites/DOMAIN/.env
+ExecStart=/home/goat/sites/DOMAIN/virtualenv/bin gunicorn \
+	--bind unix:/tmp/DOMAIN.socket \
+	superlists.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
