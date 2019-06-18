@@ -25,7 +25,7 @@ SECRET_KEY = '(wxzektc6^plr88wg-cs0f@lq7e-wqi_#_%g$fa4&xdr=r)neb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["superlists.chickenkiller.com"]
 
 
 # Application definition
